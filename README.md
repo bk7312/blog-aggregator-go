@@ -32,21 +32,29 @@ Create a json file in your home directory `~/.gatorconfig.json` containing the f
 }
 ```
 
-And you should be able to run `go run . <command>` to use the CLI. Alternatively, you can run `go build` to compile the binary and run using that instead, i.e. `<binary_name> <command>`
+And you should be able to run `go run . <command>` to use the CLI.
+
+Alternatively, you can install using:
+
+```bash
+go install github.com/bk7312/blog-aggregator-go
+```
+
+And run directly using `blog-aggregator-go <command>` instead.
 
 ## Usage
 
-To use the CLI, run `go run . <command>`, or `<binary_name> <command>` after compiling. Refer below for the list of available commands.
+To use the CLI, run `go run . <command>`, or `blog-aggregator-go <command>` after installing. Refer below for the list of available commands.
 
-- login: `go run . login <username>` to login once registered.
-- register: `go run . register <username>` to register.
-- reset: `go run . reset` will reset the database.
-- users: `go run . users` to list all users.
-- agg: : `go run . agg <time>` to fetch the feeds, runs continuously in intervals set by `<time>` (5s, 3m, 1h, etc).
-- addfeed: `go run . addfeed <feed_name> <feed_url>` to add feed to db.
-- feeds: `go run . feeds` to list all available feeds in db.
-- follow: `go run . follow <feed_url>` to follow the feed.
-- following: `go run . following` to show list of followed feeds.
-- unfollow: `go run . unfollow <feed_url>` to unfollow the feed.
-- browse: `go run . browse <limit>` to show latest `<limit>` number of posts.
-- help: `go run . help` to show the list of available commands.
+- login: `login <username>` to login once registered.
+- register: `register <username>` to register.
+- reset: `reset` will reset the database.
+- users: `users` to list all users.
+- agg: : `agg <time>` to fetch the feeds, runs continuously in intervals set by `<time>` (5s, 3m, 1h, etc).
+- addfeed: `addfeed <feed_name> <feed_url>` to add feed to db.
+- feeds: `feeds` to list all available feeds in db.
+- follow: `follow <feed_url>` to follow the feed.
+- following: `following` to show list of followed feeds.
+- unfollow: `unfollow <feed_url>` to unfollow the feed.
+- browse: `browse <limit>` to show latest `<limit>` number of posts.
+- help: `help` to show the list of available commands.
